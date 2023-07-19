@@ -33,9 +33,9 @@ public class MuseumService implements MuseumServiceInterface {
    *
    * @param coordinate  As coordenadas da localização.
    * @param maxDistance A distância máxima permitida para a busca do museu.
-   * @return O museu mais próximo da coordenada, se encontrado.
+   * @return O museu mais próximo da coordenada.
    * @throws InvalidCoordinateException Se as coordenadas fornecidas forem inválidas.
-   * @throws MuseumNotFoundException   Se nenhum museu for encontrado dentro da distância máxima.
+   * @throws MuseumNotFoundException   Se não for encontrado um museu dentro da distância máxima.
    */
   @Override
   public Museum getClosestMuseum(Coordinate coordinate, Double maxDistance) {
@@ -69,9 +69,9 @@ public class MuseumService implements MuseumServiceInterface {
   /**
    * Obtém um museu pelo seu ID.
    *
-   * @param id O ID do museu a ser obtido.
-   * @return O museu com o ID fornecido, se encontrado.
-   * @throws MuseumNotFoundException Se nenhum museu for encontrado com o ID fornecido.
+   * @param id O ID do museu a ser encontrado.
+   * @return O museu com o ID fornecido
+   * @throws MuseumNotFoundException Se não for encontrado um museu com o ID fornecido.
    */
   @Override
   public Museum getMuseum(Long id) {
