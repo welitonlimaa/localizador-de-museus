@@ -11,10 +11,8 @@ public class MuseumNotFoundException extends RuntimeException {
 
   /**
    * Construtor da exceção MuseumNotFoundException.
-   *
-   * @param message A mensagem de erro associada à exceção.
    */
-  public MuseumNotFoundException(String message) {
-    super(message);
+  public MuseumNotFoundException() {
+    super("Museu não encontrado!");
   }
 }

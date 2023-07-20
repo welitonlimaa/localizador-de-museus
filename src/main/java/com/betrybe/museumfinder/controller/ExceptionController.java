@@ -29,11 +29,11 @@ public class ExceptionController {
    * Trata a exceção MuseumNotFoundException,quando um museu não é encontrado.
    *
    * @param exception A exceção MuseumNotFoundException lançada na aplicação.
-   * @return Uma resposta com o status HTTP 404 (Not Found) sem corpo de resposta.
+   * @return Uma resposta com o status HTTP 404.
    */
   @ExceptionHandler(MuseumNotFoundException.class)
   public ResponseEntity<Object> handleMuseumNotFoundException(RuntimeException exception) {
-    return ResponseEntity.notFound().build();
+    return ResponseEntity.status(404).body(exception.getMessage());
   }
 
   /**
@@ -46,6 +46,6 @@ public class ExceptionController {
   public ResponseEntity<String> handleException(Exception exception) {
     return ResponseEntity
         .status(HttpStatus.INTERNAL_SERVER_ERROR)
-        .body(exception.getMessage());
+        .body("Erro interno!");
   }
 }
