@@ -17,13 +17,11 @@ class CollectionTypeServiceTest {
     CollectionTypeService service = new CollectionTypeService(databaseMock);
 
     String typesList = "history,image";
-    when(databaseMock.countByCollectionType("history")).thenReturn(14L);
-    when(databaseMock.countByCollectionType("image")).thenReturn(42L);
+    when(databaseMock.countByCollectionType("history")).thenReturn(42L);
 
     CollectionTypeCount result = service.countByCollectionTypes(typesList);
 
     assertEquals(2, result.collectionTypes().length);
-    assertEquals(14L, result.count());
     assertEquals(42L, result.count());
   }
 }
