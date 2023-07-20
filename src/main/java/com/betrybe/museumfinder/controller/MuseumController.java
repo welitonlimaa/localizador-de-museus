@@ -78,7 +78,7 @@ public class MuseumController {
    * @return Uma resposta com o museu encontrado e o status HTTP 200 (OK).
    */
   @GetMapping("/{id}")
-  public ResponseEntity<MuseumDto> getMuseumById(@PathVariable Long id) {
+  public ResponseEntity<MuseumDto> getMuseum(@PathVariable Long id) {
     Museum museum = museumService.getMuseum(id);
     return ResponseEntity.ok(modelToDto(museum));
   }
