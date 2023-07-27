@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * Esta classe é responsável por fornecer serviços relacionados a museus.
+ * Esta classe é responsável por fornecer os services relacionados a museus.
  * Implementa a interface MuseumServiceInterface.
  */
 @Service
@@ -21,7 +21,7 @@ public class MuseumService implements MuseumServiceInterface {
   /**
    * Construtor da classe MuseumService.
    *
-   * @param museumFakeDatabase O banco de dados fake de museus a ser utilizado pelo serviço.
+   * @param museumFakeDatabase O banco de dados fake.
    */
   @Autowired
   public MuseumService(MuseumFakeDatabase museumFakeDatabase) {
@@ -29,7 +29,7 @@ public class MuseumService implements MuseumServiceInterface {
   }
 
   /**
-   * Obtém o museu mais próximo da coordenada fornecida.
+   * Busca o museu mais próximo da coordenada fornecida.
    *
    * @param coordinate  As coordenadas da localização.
    * @param maxDistance A distância máxima permitida para a busca do museu.
@@ -66,7 +66,7 @@ public class MuseumService implements MuseumServiceInterface {
   }
 
   /**
-   * Obtém um museu pelo seu ID.
+   * Busca um museu pelo seu ID.
    *
    * @param id O ID do museu a ser encontrado.
    * @return O museu com o ID fornecido

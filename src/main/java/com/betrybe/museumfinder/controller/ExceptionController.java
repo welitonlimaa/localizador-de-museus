@@ -18,7 +18,7 @@ public class ExceptionController {
    * Trata a exceção InvalidCoordinateException, quando as coordenadas fornecidas são inválidas.
    *
    * @param exception A exceção InvalidCoordinateException lançada na aplicação.
-   * @return Uma resposta com a mensagem de erro e o status HTTP 400 (Bad Request).
+   * @return Uma resposta com a mensagem de erro e o status HTTP 400.
    */
   @ExceptionHandler(InvalidCoordinateException.class)
   public ResponseEntity<String> handleInvalidCoordinateException(RuntimeException exception) {

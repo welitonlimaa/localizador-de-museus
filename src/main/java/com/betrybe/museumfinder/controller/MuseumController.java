@@ -32,7 +32,7 @@ public class MuseumController {
   /**
    * Construtor do MuseumController.
    *
-   * @param museumService O serviço MuseumServiceInterface a ser utilizado pelo controlador.
+   * @param museumService O service MuseumServiceInterface a ser utilizado pelo controlador.
    */
   @Autowired
   public MuseumController(MuseumServiceInterface museumService) {
@@ -40,10 +40,10 @@ public class MuseumController {
   }
 
   /**
-   * Cria um novo museu com base nos dados fornecidos no corpo da requisição.
+   * Cria um novo museu com base nos dados fornecidos.
    *
    * @param newMuseum O DTO MuseumCreationDto contendo os detalhes do museu a ser criado.
-   * @return Uma resposta do museu criado e o status HTTP 201 (Created).
+   * @return museu criado e o status HTTP 201.
    */
   @PostMapping
   public ResponseEntity<MuseumDto> createMuseum(@RequestBody MuseumCreationDto newMuseum) {
@@ -53,12 +53,12 @@ public class MuseumController {
   }
 
   /**
-   * Obtém o museu mais próximo com base nas coordenadas fornecidas e na distância máxima.
+   * Busca o museu mais próximo com base nas coordenadas fornecidas e na distância máxima.
    *
    * @param latitude    A latitude da coordenada.
    * @param longitude   A longitude da coordenada.
    * @param maxDistance A distância máxima permitida para a busca do museu mais próximo.
-   * @return Uma resposta museu mais próximo encontrado.
+   * @return museu mais próximo encontrado.
    */
   @GetMapping("/closest")
   public ResponseEntity<MuseumDto> getClosestMuseum(
@@ -72,10 +72,10 @@ public class MuseumController {
   }
 
   /**
-   * Obtém um museu pelo seu ID.
+   * Busca um museu pelo seu ID.
    *
    * @param id O ID do museu a ser encontrado.
-   * @return Uma resposta com o museu encontrado e o status HTTP 200 (OK).
+   * @return museu encontrado e o status HTTP 200.
    */
   @GetMapping("/{id}")
   public ResponseEntity<MuseumDto> getMuseum(@PathVariable Long id) {
