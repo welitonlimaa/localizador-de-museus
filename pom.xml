@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.betrybe</groupId>
+    <groupId>com.museumfinder</groupId>
     <artifactId>museum-finder</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>museum-finder</name>
@@ -126,7 +126,7 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
         <configuration>
-          <mainClass>com.betrybe.museumfinder.MuseumFinderApplication</mainClass>
+          <mainClass>com.museumfinder.MuseumFinderApplication</mainClass>
           <layout>JAR</layout>
         </configuration>
       </plugin>
